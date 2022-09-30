@@ -72,5 +72,32 @@ const div = document.createElement('div')
 - parentNode.appendChild(childNode) appends childNode as the last child of parentNode
 - parentNode.insertBefore(newNode, referenceNode) inserts newNode into parentNode before referenceNode
 
+#### Editing Attributes
+ ```
+ div.setAttribute('id', 'theDiv');
+ //if id exists, update it to 'theDiv", else create an id with value "theDiv"
+ 
+ div.getAttribute('id');
+ //returns the value of specified attribute in this case, "theDiv"
+ 
+ div.removeAttribute('id');
+ //removes specified attribute
+ ```
+
+#### Working with classes
+```
+div.classList.add('new');                                      
+// adds class "new" to your new div
+
+div.classList.remove('new');                                   
+// removes "new" class from div
+
+div.classList.toggle('active');                                
+// if div doesn't have class "active" then add it, or if
+// it does, then remove it
+```
+It is standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.
+
+## Events
 
 
