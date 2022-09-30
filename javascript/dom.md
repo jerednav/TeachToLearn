@@ -99,5 +99,45 @@ div.classList.toggle('active');
 It is standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.
 
 ## Events
+- Events are actions that you can manipulate the DOM dynamically.
+- Actions such as mouse clicks or keypresses.
+
+There are 3 primary ways to add events.
+1. Attach functions' attributes directly on your HTML elements 
+2. Set the "on_event" property on the DOM object in your JavaScript
+3. Attach event listeners to the nodes in your JavaScript
+
+#### 3 ways to add events
+1. Attach functions' attributes directly on your HTML elements 
+```
+<button onclick="alert('Hello World')">Click Me</button>
+```
+- Not the best solution because it's cluttering the HTML with the JavaScript
+
+2. Set the "on_event" property on the DOM object in your JavaScript
+```
+<!-- the HTML file -->
+<button id="btn">Click Me</button>
+```
+```
+// the JavaScript file
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+```
+- This is a little better. We’ve moved the JS out of the HTML and into a JS file, but we still have the problem that a DOM element can only have 1 “onclick” property.
+
+3. Attach event listeners to the nodes in your JavaScript
+```
+<!-- the HTML file -->
+<button id="btn">Click Me Too</button>
+```
+```
+// the JavaScript file
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
+```
+Now, we maintain separation of concerns, and we also allow multiple event listeners if the need arises. Method 3 is much more flexible and powerful, though it is a bit more complex to set up.
 
 
