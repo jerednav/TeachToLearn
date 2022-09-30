@@ -56,6 +56,21 @@ document.querySelectorAll('h1')
 **textContent**
 - renders just the text, good when you need to alter text
 
+#### Element Creation
+```
+document.createElement(tagName,[option])
+```
+- creates a new element of tag type tagName. [options] in this case means you can add some optional parameters to the function. Don't worry about these at this point.
+
+```
+const div = document.createElement('div')
+```
+
+- This function does NOT put your new element into the DOM, it just creates it in memory. This allows you to manipulate the element before putting it on the page.
+
+#### Append Elements
+- parentNode.appendChild(childNode) appends childNode as the last child of parentNode
+- parentNode.insertBefore(newNode, referenceNode) inserts newNode into parentNode before referenceNode
 
 
 
