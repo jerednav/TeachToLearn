@@ -26,7 +26,8 @@
    - div#container > div.d##play
 - Once you choose the selector you want to manipulate, you then pick a DOM method to perform that action on the selector.
 - When a HTML code is parsed by the web browser, it's converted to the DOM. The primary difference is that these nodes are objects that has it's own set of properties and methods. These methods and properties are what we are going to use to manipulate the DOM.
-#### Query Selector
+-
+#### DOM methods
 
 **.querySelector**
 
@@ -38,9 +39,23 @@ document.querySelector('h1')
 **.querySelectorAll**
 
 - select all elements with the selector
+- returns a nodelist containing references to all of the matches of the selectors
+- 
+
 ```
 document.querySelectorAll('h1')
 ```
+**innerText**
+
+- represents the "rendered" text content from the node/element, which will include styles
+
+**innerHTML**
+
+- renders the HTML inside div
+
+**textContent**
+- renders just the text, good when you need to alter text
+
 
 
 
